@@ -57,13 +57,105 @@ const apellidosInput = document.querySelector('#apellidos');
 const edadInput = document.querySelector('#edad');
 const departamentoInput = document.querySelector('#departamento');
 const ciudadInput = document.querySelector('#ciudad');
+const siInput = document.querySelector('#si');
+const noInput = document.querySelector('#no');
 
 btnLanzarmodal.addEventListener('click', (e) => {
     e.preventDefault();
     contModal.classList.add('mostrar');
+
 });
 
 btnOcultarmodal.addEventListener('click', (e) => {
     e.preventDefault();
     contModal.classList.remove('mostrar');
+})
+
+inputenviar.addEventListener('click', (evento) => {
+  evento.preventDefault();
+  let usuario = nombre.value; 
+    let lastname = apellidos.value; 
+    let email = correo.value; 
+    let telefono = celular.value; 
+    let years = edad.value; 
+    let depart = departamento.value; 
+    let residencia = ciudad.value; 
+    let exper_si = si.value; 
+    let exper_no = no.value;
+
+    let errores=[];
+    let datos;
+    datosMemoria= JSON.parse(localStorage.getItem('formulario'));
+    
+    if(!datosMemoria) {
+      datos=[];
+  } else {
+      datos = datosMemoria; 
+  }
+
+  if(!usuario){
+    errores.push('El nombre debe ser obligatorio'); 
+    campoNombre.classList.add("error");
+    campoNombre.classList.add("is-invalid"); 
+    document.getElementById('errorUsuario').textContent = 'El campo nombre debe ser obligatorio';
+    } else if(usuario.length < 10) {
+        campoNombre.classList.add("is-invalid")
+        document.getElementById('errorUsuario').textContent = 'El Nombre debe tener minimo 10 caracteres';    
+    }
+
+    if(!lastname){
+      errores.push('El apellido debe ser obligatorio'); 
+      campoApellido.classList.add("is-invalid")
+      document.getElementById('errorApellido').textContent = 'El campo apellido debe ser obligatorio';
+  } else if (lastname.length < 10) {
+      campoApellido.classList.add("is-invalid")
+      document.getElementById('errorApellido').textContent = 'El apellido debe tener minimo 10 caracteres';    
+  }
+
+  if(!email){
+    errores.push('El correo debe ser obligatorio'); 
+    campoEmail.classList.add("is-invalid")
+    document.getElementById('errorCorreo').textContent = 'El campo correo debe ser obligatorio';
+}  else if (!validarEmail(email)) {
+    errores.push('El correo debe ser obligatorio')
+    campoEmail.classList.add("is-invalid")
+    document.getElementById('errorCorreo').textContent = 'El correo electrónico no es válido';
+}
+
+if(!telefono){
+  errores.push('El telefono debe ser obligatorio'); 
+  campoTelefono.classList.add("is-invalid")
+  document.getElementById('errorTel').textContent = 'El campo Telefono debe ser obligatorio';
+  }
+
+  if(!years){
+    errores.push('La edad debe ser obligatoria'); 
+    campoFecha.classList.add("is-invalid")
+    document.getElementById('errorEdad').textContent = 'El campo edad debe ser obligatorio';
+ }
+
+ if(!depart){
+  errores.push('La Departamento debe ser obligatoria'); 
+  campoFecha.classList.add("is-invalid")
+  document.getElementById('errorDepart').textContent = 'El campo Departamento debe ser obligatorio';
+}
+
+if(!residencia){
+  errores.push('La ciudadDepartamento debe ser obligatoria'); 
+  campoFecha.classList.add("is-invalid")
+  document.getElementById('errorResidencia').textContent = 'El campo Ciudad debe ser obligatorio';
+}
+if(errores.length == 0) {
+  let datosEnvios = {
+      usuario,
+      apellidos,
+      years,
+      email,
+      telefono,
+      depart,
+      residencia
+  }
+  citas.push(datosEnvios)
+  localStorage.setItem('formulario', JSON.stringify(datos))
+}  
 })
