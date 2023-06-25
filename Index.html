@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="icon" href="./img/icono.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@200&family=PT+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <section class="logo">
+                <img src="./img/RF_1.png" class="logo1" alt="">
+            </section>
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Sobre_Nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="Productos.html">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+              </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Carrusel -->
+        <section class="carrusel">
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                  <img src="./img/oficina.jpg">
+                  <img src="./img/loby.jpg">
+                  <img src="./img/ropero.jpg">
+                </div>
+                <button class="carousel-prev" onclick="moveToPrevSlide()">&lt;</button>
+                <button class="carousel-next" onclick="moveToNextSlide()">&gt;</button>
+              </div>
+        </section>
+
+        <!-- Novedades -->
+        <section class="novedades">
+            <h1>NOVEDADES</h1>
+        <h3>Poster Publicitarios</h3>
+        <section class="poster">
+            <img src="./img/pu.jpeg" alt="" class="publi">
+            <img src="./img/pu2.PNG" alt="" class="publi">
+        </section>
+        </section>
+
+        <!-- Convocatoria -->
+        <section class="convocatoria">
+            <h1 class="titulo">CONVOCATORIA</h1>
+            <h2 class="titulo">OFERTAS LABORALES</h2>
+            <section class="ofertas">
+                <section class="oferta1">
+                    <section class="ref">
+                        <img src="./img/capacitacionbg.png" class="csa" alt="">
+                    </section>
+                    <section class="descripcion">
+                        <h3>Analista de Capaitación y Desarrollo</h3>
+                        <p>Estamos buscando un Analista de Capacitación y Desarrollo
+                            altamente motivado para unirse a nuestro equipo en Medellín...</p>
+                        <button class="btn" type="submit" id="lanzar-modal" onclick="openModal()">POSTULARME</button>
+                        <button class="postularme-button btn" onclick="openDescriptionModal()">Ver más</button>
+                    </section>
+                    <div id="description-overlay" class="description-overlay"></div>
+                    <div id="description-modal" class="description-modal">
+                      <span class="description-close-button" onclick="closeDescriptionModal()">&times;</span>
+                      <h2>Analista de Capaitación y Desarrollo</h2>
+              <p>
+                Estamos buscando un Analista de Capacitación y Desarrollo
+                altamente motivado para unirse a nuestro equipo en Medellín.
+                Serás responsable de diseñar, implementar y evaluar programas de
+                capacitación y desarrollo para nuestros empleados, asegurando
+                que cuenten con las habilidades necesarias para el éxito
+                individual y el crecimiento de la organización. Ofrecemos un
+                salario competitivo de 2'113.061 y un contrato a término fijo de
+                1 año.
+              </p>
+              <br />
+              <p>
+                Si tienes experiencia en capacitación, habilidades de
+                comunicación excepcionales y pasión por el desarrollo del
+                talento, te invitamos a postularte. Esperamos recibir tu
+                currículum y carta de presentación que demuestren tu experiencia
+                y motivación para unirte a nuestro equipo en Medellín como
+                Analista de Capacitación y Desarrollo.
+              </p>
+              <h4 class="t">SALARIO:</h4>
+              <p class="t">2'113.061</p>
+              <h4 class="t">DURACION DE CONTRATO:</h4>
+              <p class="t">Termino Fijo a 1 Año</p>
+                    </div>
+                    <div class="contenedor-modal">
+                        <section class="modal">
+                            <h2>Formulario de Postulación</h2>
+                            <form class="text">
+                             <section class="datos1">
+                                <section class="nombre">
+                                    <label for="nombre" class="titulo-form">Nombres</label>
+                                <input type="text" id="nombre" name="nombre" class="form-input" placeholder="Ingresa Nombres"><br>
+                                </section>
+                          
+                                <section class="apellidos">
+                                    <label for="apellidos" class="titulo-form">Apellidos</label>
+                                <input type="text" id="apellidos" name="apellidos" class="form-input" placeholder="Ingresa Apellidos">
+                             </section>
+                                </section>
+
+                              <label for="apellidos" class="titulo-form">Correo</label>
+                              <input type="text" id="correo" name="correo" class="form-input" placeholder="Ingresa Correo @">
+
+                              <section class="datos3">
+                                <section class="cel">
+                                    <label for="apellidos" class="titulo-form">Celular</label>
+                              <input type="text" id="celular" name="celular" class="form-input" placeholder="Ingresa Celular #">
+                                </section>
+                              <section class="edad">
+                                <label for="edad" class="titulo-form">Edad</label>
+                              <input type="number" id="edad" name="edad" min="18" max="50" class="form-input" placeholder="Ingresa Edad">
+                              </section>
+                              </section>
+                        
+                              <section class="datos4">
+                                <section class="departamento">
+                                    <label for="departamento" class="titulo-form">Departamento</label>
+                              <input type="text" id="departamento" name="departamento" class="form-input" placeholder="Ingresa Depto">
+                                </section>
+                        
+                              <section class="ciudad">
+                                <label for="ciudad" class="titulo-form">Ciudad de residencia</label>
+                              <input type="text" id="ciudad" name="ciudad" class="form-input" placeholder="Ingresa Ciudad">
+                              </section>
+                              </section>
+                        
+                              <div class="form-group">
+                                <label class="form-label">Experiencia</label><br><br>
+                                <div class="form-radio">
+                                    <label for="si">Si</label>
+                                  <input type="radio" id="si" name="experiencia" value="si">
+                                </div>
+                                <div class="form-radio">
+                                    <label for="no">No</label>
+                                  <input type="radio" id="no" name="experiencia" value="no">
+                                </div>
+                              </div>
+                        
+                              <input type="submit"  value="Enviar" id="enviar">
+                            </form>
+                        </section>
+                    </div>
+                </section>
+                <section class="oferta2">
+                    <section class="ref">
+                        <img src="./img/of.png" class="csa" alt="oferta">
+                    </section>
+                    <section class="descripcion">
+                        <h3>OFERTA2</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vero rerum obcaecati voluptas perspiciatis deleniti, nam ut tenetur id consequatur recusandae animi reiciendis corrupti, alias saepe. Deserunt accusamus perferendis eos!</p>
+                        <button class="btn" type="submit" id="lanzar-modal" onclick="openModal()">POSTULARME</button>
+                    </section>
+                </section>
+                <section class="oferta3">
+                    <section class="ref">
+                        <img src="./img/of2.png" class="csa" alt="oferta">
+                    </section>
+                    <section class="descripcion">
+                        <h3>OFERTA3</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vero rerum obcaecati voluptas perspiciatis deleniti, nam ut tenetur id consequatur recusandae animi reiciendis corrupti, alias saepe. Deserunt accusamus perferendis eos!</p>
+                        <button class="btn" type="submit" id="lanzar-modal" onclick="openModal()">POSTULARME</button>
+                    </section>
+                </section>
+                <section class="oferta4">
+                    <section class="ref">
+                        <img src="./img/of3.png" class="csa" alt="oferta">
+                    </section>
+                    <section class="descripcion">
+                        <h3>OFERTA4</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vero rerum obcaecati voluptas perspiciatis deleniti, nam ut tenetur id consequatur recusandae animi reiciendis corrupti, alias saepe. Deserunt accusamus perferendis eos!</p>
+                        <button class="btn" type="submit" id="lanzar-modal" onclick="openModal()">POSTULARME</button>
+                    </section>
+                </section>
+            </section>
+        </section>
+    </main>
+
+   <footer>
+    <section class="LG">
+      <img src="./img/RF_1.png" class="img" alt="">
+  </section>
+  <section class="containerfooter">
+      <section class="socials">
+        <a href="https://www.facebook.com/profile.php?id=100093993435425&sk=about"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.instagram.com/_renew_fashion/"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://twitter.com/RenewF31"><i class="fa-brands fa-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-google-plus"></i></a>
+      </section>
+      <section class="inte">
+        <ul>
+          <li><a href="">Gissela Ruiz</a></li>
+          <li><a href="">Julieth Alvarez</a></li>
+          <li><a href="">Manuela Arenas</a></li>
+          <li><a href="">Vanesssa Tellez</a></li>
+          <li><a href="">Yesica Guzman</a></li>
+        </ul>
+      </section>
+      <section class="footerbottom">
+        <p>Copyright &copy 2022; Designed by <span class="designer">FashionRenew</span></p>
+      </section>
+    </section>
+   </footer>
+
+    <script src="./js/controlador.js"></script>
+</body>
+</html>

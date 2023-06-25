@@ -1,0 +1,202 @@
+*{
+    font-family: 'Geologica', sans-serif;
+  font-family: 'PT Serif', serif;
+  }
+
+  body{
+    background-color: #c0c0c054;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #02735E;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 200px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav ul li a:hover {
+    background-color: #014034;
+  }
+  
+  .logo{
+    display: flex;
+    justify-content: left;
+    align-items: end;
+  }
+  
+  .logo1{
+    width: 100%;
+    height: 4rem;
+    margin-left: 40px;
+  }
+
+  main {
+    margin: 50px;
+    padding-top: 50px; /* Añade un espacio superior para evitar que el contenido se solape con la barra de navegación */
+  }
+
+.productos{
+    display: flex;
+    margin: -10px;
+  
+  }
+  .card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0px 10px 5px 5px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .card-description {
+    margin-bottom: 10px;
+  }
+  
+  .add-to-cart-btn {
+    background-color: #014034;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #45a049;
+  }
+
+  * footer{
+    padding: 0;
+    box-sizing: border-box;
+  }
+  footer{
+    background-color: #014034;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  .containerfooter{
+    padding: 70px 30px 20px;
+  }
+  .LG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .img{
+    box-shadow: 0px 5px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  .socials{
+    display:flex ;
+    justify-content: center;
+  }
+  .socials a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: #014034;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  .socials a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+  }
+  
+  /* Hover Efecto */
+  .socials a:hover{
+    background-color: white;
+    transition: 0.5s;
+  }
+  
+  .socials a:hover i{
+    color: black;
+    transition: 0.5s;
+  }
+  .inte{
+    margin: 10px 0;
+  }
+  .inte ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .inte ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  
+  .inte ul li a:hover{
+    opacity: 1;
+  }
+  
+  .footerbottom{
+    background-color: #01352bd2;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    width: 95%;
+  }
+  .footerbottom p{
+    color: white;
+  }
+  .designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0px 5px;
+  }
+  
+  @media (max-width: 700px){
+    .inte ul{
+      flex-direction: column;
+    }
+    .inte ul li{
+      width: 100%;
+      text-align: center;
+      margin: 10px;
+    }
+  }
