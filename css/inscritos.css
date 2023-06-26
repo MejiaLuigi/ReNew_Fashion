@@ -65,6 +65,12 @@
     padding-top: 50px; /* Añade un espacio superior para evitar que el contenido se solape con la barra de navegación */
   }
 
+
+.section_izq{
+  border: 2px solid;
+}
+
+/* FOOTER */
   * footer{
     padding: 0;
     box-sizing: border-box;

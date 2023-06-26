@@ -293,10 +293,12 @@
     text-align: center;
   }
   
-   #nombre,#apellidos, #celular, #edad, #correo, #departamento, #ciudad{
+   #nombre,#apellidos, #celular, #edad, #correo, #departamento, #ciudad, #documento{
     width: 15rem;
     border-radius: 6px;
   }
+
+
 
   /* FOOTER */
 * footer{

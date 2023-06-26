@@ -18,7 +18,7 @@
                 <img src="./img/RF_1.png" class="logo1" alt="">
             </section>
             <ul>
-                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a href="Index.html">Inicio</a></li>
                 <li><a href="Inscritos.html">Inscritos</a></li>
                 <li><a href="Sobre_Nosotros.html">Sobre Nosotros</a></li>
                 <li><a href="Productos.html">Productos</a></li>
@@ -70,7 +70,7 @@
                     </section>
                     <div id="description-overlay" class="description-overlay"></div>
                     <div id="description-modal" class="description-modal">
-                      <span class="description-close-button" onclick="closeDescriptionModal()">&times;</span>
+                      <span class="description-close-button" id="ocultar-modal" onclick="closeDescriptionModal()">&times;</span>
                       <h2>Analista de Capaitación y Desarrollo</h2>
               <p>
                 Estamos buscando un Analista de Capacitación y Desarrollo
@@ -109,22 +109,25 @@
                                 <section class="apellidos">
                                     <label for="apellidos" class="titulo-form">Apellidos</label>
                                 <input type="text" id="apellidos" name="apellidos" class="form-input" placeholder="Ingresa Apellidos" required>
-                             </section>
                                 </section>
+                              </section>
 
-                              <label for="apellidos" class="titulo-form">Correo</label>
+                              <label for="correo" class="titulo-form">Correo</label>
                               <input type="text" id="correo" name="correo" class="form-input" placeholder="Ingresa Correo @" required>
 
                               <section class="datos3">
-                                <section class="cel">
+                                  <section class="cel">
                                     <label for="apellidos" class="titulo-form">Celular</label>
-                              <input type="text" id="celular" name="celular" class="form-input" placeholder="Ingresa Celular #" required>
-                                </section>
-                              <section class="edad">
-                                <label for="edad" class="titulo-form">Edad</label>
-                              <input type="number" id="edad" name="edad" min="18" max="50" class="form-input" placeholder="Ingresa Edad" required>
+                                    <input type="text" id="celular" name="celular" class="form-input" placeholder="Ingresa Celular #" required>
+                                  </section>
+                                  <section class="edad">
+                                    <label for="edad" class="titulo-form">Edad</label>
+                                    <input type="number" id="edad" name="edad" min="18" max="50" class="form-input" placeholder="Ingresa Edad" required>
+                                  </section>
                               </section>
-                              </section>
+
+                              <label for="correo" class="titulo-form">Documento</label>
+                              <input type="number-text" id="documento" name="documento" class="form-input" placeholder="Ingresa Documento" required>
                         
                               <section class="datos4">
                                 <section class="departamento">
@@ -148,6 +151,11 @@
                                     <label for="no">No</label>
                                   <input type="radio" id="no" name="experiencia" value="no" required>
                                 </div>
+                              </div>
+
+                              <div class="form-group">
+                                <label class="form-label form-titulo">Adjuntar archivo</label>
+                                <input type="file" id="archivo" name="archivo" class="form-input selecc" required>
                               </div>
                         
                               <input type="submit"  value="Enviar"  id="enviar">
