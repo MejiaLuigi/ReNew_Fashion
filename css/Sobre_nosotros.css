@@ -58,6 +58,7 @@
     width: 100%;
     height: 4rem;
     margin-left: 40px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
   }
 
   main {
@@ -217,11 +218,60 @@
   }
   
   @media (max-width: 700px){
+
+    .somos{
+      width: 100%;
+    }
+    .somost{
+      width: 50%;
+    }
+    .somosimg{
+      width: 50%;
+      height: 100%;
+      justify-content: center;
+    }
+    .logo1{
+      display: none;
+    }
+    #poster2{
+      width: 100%;
+      height: 100%;
+    
+    }
+    .mision_vision, .politicas_valores, .estrategias{
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+     .objetivos, .vision, .valores, .politica,.estrategias{
+      width: 100%;
+      justify-content: center;
+      margin: 5px;
+    }
+
+/* Footer */
+footer{
+  /* width: max-content; */
+  justify-content: center;
+}
+.LG{
+  /* width: 100%; */
+  padding: 5px;
+  justify-content: center;
+}
+.img{
+  width: 50%;
+  padding: 5px;
+}
+.containerfooter{
+  /* width: 100%; */
+  justify-content: center;
+}
     .inte ul{
       flex-direction: column;
     }
     .inte ul li{
-      width: 100%;
+      /* width: 100%; */
       text-align: center;
       margin: 10px;
     }

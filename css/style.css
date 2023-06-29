@@ -58,6 +58,7 @@
     width: 100%;
     height: 4rem;
     margin-left: 40px;
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
   }
 
   main {
@@ -119,11 +120,11 @@
   .poster{
     display: flex;
     height: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 75px;
   }
   .publi{
     width: 50%;
-    height: 500px;
+    height: 700px;
     margin: 0px 10px;
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
   
@@ -148,7 +149,7 @@
     margin: 5px;
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
   }
-  .btn{
+  .btn, .btn1{
     border-radius: 25px;
     margin-bottom: 6px;
     background-color: #014034;
@@ -156,6 +157,9 @@
     height: 30px;
     width: 15%;
     box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.3);
+  }
+  .btn1{
+    display: none;
   }
 
   #enviar{
@@ -225,7 +229,7 @@
     opacity: 0;
     display: flex;
     width: 50%;
-    height: 100%;
+    max-height: max-content;
     border: 5px solid #014034;
     justify-content: center;
     align-items: center;
@@ -250,24 +254,27 @@
   }
   form{
     width: 100%;
+    height: 80%;
+    max-height: max-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    /* border: 1px solid red; */
     border-radius: 10px;
     background-color: #038C73;
     /* padding: 10px; */
   }
   form input{
-    margin: 15px;
+    margin: 0px 15px;
     padding: 10px;
   }
   
   .datos1, .datos3, .datos4{
     width: 100%;
-    margin: 5px 10px;
     display: flex;
     justify-content: space-around;
+
   
   }
   .nombre, .apellidos, .cel, .edad, .departamento, .ciudad{
@@ -279,6 +286,10 @@
   
   .text{
     text-align: center;
+  }
+  .modal{
+    width: +100%;
+    height: 100%;
   }
   
   .form-titulo{
@@ -390,11 +401,120 @@
   }
   
   @media (max-width: 700px){
+
+    .logo1{
+      display: none;
+    }
+
+    #nombre,#apellidos, #celular, #edad, #correo, #departamento, #ciudad, #documento{
+      width: 10rem;
+      border-radius: 6px;
+      margin: 0 0;
+    }
+
+    /* Carrusel */
+    .carrusel{
+      display: none;
+    }
+/* novedades */
+    .poster{
+      width: 100%;
+      margin-bottom: 10rem;
+      flex-direction: column;
+    }
+    .publi{
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+/* Convocatoria */
+.convocatoria{
+  width: 100%;
+}
+.btn{
+  width: 65%;
+}
+/* Formulario */
+.contenedor-modal {
+  
+  display: flex;
+  width: 100%;
+  max-height: max-content;
+  height: 80%;
+  height: max-content;
+  position: fixed;
+  justify-content: center;
+  align-content: start;
+  margin-top: 0;
+  margin: 0px 0.1rem;
+}
+.text{
+  height: 80%;
+  height: max-content;
+  justify-content: center;
+}
+form{
+  border: 1px solid red;
+  /* width: 100%; */
+  height: 50%;
+  /* height: max-content; */
+  max-height: max-content;
+  justify-content: center;
+  align-content: start;
+  /* border: 1px solid red; */
+  /* padding: 10px; */
+}
+#t{
+  text-align: center;
+}
+.modal{
+  /* border: 1px solid; */
+  border: 1px solid rgb(47, 0, 255);
+  margin-top: 20px;
+  /* width: 100%; */
+  /* height: max-content; */
+  height: 60%;
+  justify-content: center;
+  align-content: center;
+} 
+.text, .datos .datos2, .datos3{
+  /* width: 100%; */
+  margin: 0px 5px;
+}
+/* Descripción */
+
+.description-modal{
+  width: 70%;
+  justify-content: center;
+  align-content: center;
+  overflow:scroll;
+  height: 70%;
+  
+}
+
+/* Footer */
+footer{
+  /* width: max-content; */
+  justify-content: center;
+}
+.LG{
+  /* width: 100%; */
+  padding: 5px;
+  justify-content: center;
+}
+.img{
+  width: 50%;
+  padding: 5px;
+}
+.containerfooter{
+  /* width: 100%; */
+  justify-content: center;
+}
     .inte ul{
       flex-direction: column;
     }
     .inte ul li{
-      width: 100%;
+      /* width: 100%; */
       text-align: center;
       margin: 10px;
     }
